@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
+
 		/* ── Overlay Lightbox ── */
 		#portfolio-overlay {
 			display: none;
@@ -147,6 +148,41 @@
 			.overlay-nav.next { right: 0.5rem; }
 			.overlay-content { padding: 1.4rem 1.2rem; }
 		}
+		
+		article.box.style2 .image.featured {
+			left: 0 !important;
+			top: 0 !important;
+			margin: 0 0 1.5em 0 !important;
+			width: 100% !important;
+			display: block;
+			padding-top: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		article.box.style2 .image.featured img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			display: block;
+		}
+		.overlay-image-wrap {
+			flex: 0 0 auto;
+			width: 100%;
+			min-height: unset;
+			max-height: unset;
+		}
+
+		.overlay-image-wrap img {
+			width: 100%;
+			height: auto;
+			max-height: 70vh;
+			object-fit: contain;
+		}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -227,75 +263,183 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic01.jpg"
+								   data-img="images/1.jpg"
 								   data-title="Magna feugiat"
 								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
-									<img src="images/pic01.jpg" alt="Magna feugiat" />
+									<img src="images/1.jpg" alt="Magna feugiat" />
 								</a>
-								<h3>Magna feugiat</h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3>Diego</h3>
+								<p>.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic02.jpg"
-								   data-title="Veroeros primis"
-								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
-									<img src="images/pic02.jpg" alt="Veroeros primis" />
-								</a>
-								<h3>Veroeros primis</h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic03.jpg"
-								   data-title="Lorem ipsum"
+								   data-img="images/2.jpg"
+								   data-title=""
 								   data-text="">
-									<img src="images/pic03.jpg" alt="Lorem ipsum" />
+									<img src="images/2.jpg" alt="Magna feugiat" />
 								</a>
-								<h3>Lorem ipsum</h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3>Marcos</h3>
+								<p>.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic04.jpg"
-								   data-title="Tempus dolore"
-								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
-									<img src="images/pic04.jpg" alt="Tempus dolore" />
-								</a>
-								<h3>Tempus dolore</h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic05.jpg"
-								   data-title="Feugiat aliquam"
-								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
-									<img src="images/pic05.jpg" alt="Feugiat aliquam" />
-								</a>
-								<h3>Feugiat aliquam</h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured portfolio-trigger"
-								   data-img="images/pic06.jpg"
-								   data-title="Sed amet ornare"
+								   data-img="images/3.jpg"
+								   data-title=""
 								   data-text="">
-									<img src="images/pic06.jpg" alt="Sed amet ornare" />
+									<img src="images/3.jpg" alt="Magna feugiat" />
 								</a>
-								<h3>Sed amet ornar</h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3>Diego</h3>
+								<p >.</p>
 							</article>
 						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/4.jpg"
+								   data-title=""
+								   data-text="">
+									<img src="images/4.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Marco</h3>
+								<p>.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/5.jpg"
+								   data-title=""
+								   data-text="">
+									<img src="images/5.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/6.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/6.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Diego</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/6.png"
+								   data-title=""
+								   data-text=".">
+									<img src="images/6.png" alt="Magna feugiat" />
+								</a>
+								<h3>Diego</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/7.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/7.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/3.png"
+								   data-title=""
+								   data-text=".">
+									<img src="images/3.png" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/8.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/8.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/10.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/10.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/9.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/9.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>(?)</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/11.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/11.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Diego</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/12.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/12.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Diego</h3>
+								<p>.</p>
+							</article>
+						</div>
+						
+						
 					</div>
 				</div>
 			</article>
