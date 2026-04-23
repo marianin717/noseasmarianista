@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NO SEAS MARIANISTA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+		/* ── Overlay Lightbox ── */
+		#portfolio-overlay {
+			display: none;
+			position: fixed;
+			inset: 0;
+			z-index: 9999;
+			background: rgba(0,0,0,0.88);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+			align-items: center;
+			justify-content: center;
+			padding: 1.5rem;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+		#portfolio-overlay.active {
+			display: flex;
+		}
+		#portfolio-overlay.visible {
+			opacity: 1;
+		}
+		.overlay-inner {
+			background: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			max-width: 900px;
+			width: 100%;
+			max-height: 90vh;
+			box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+			position: relative;
+			animation: overlaySlideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+		}
+		@keyframes overlaySlideIn {
+			from { transform: translateY(24px) scale(0.97); opacity: 0; }
+			to   { transform: translateY(0) scale(1); opacity: 1; }
+		}
+		.overlay-image-wrap {
+			flex: 0 0 55%;
+			background: #111;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 320px;
+		}
+		.overlay-image-wrap img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		.overlay-content {
+			flex: 1;
+			padding: 2.2rem 2rem;
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background: #fafafa;
+		}
+		.overlay-content h3 {
+			font-size: 1.4rem;
+			font-weight: 700;
+			margin-bottom: 0.8rem;
+			color: #333;
+			line-height: 1.3;
+		}
+		.overlay-content p {
+			font-size: 0.95rem;
+			line-height: 1.7;
+			color: #555;
+		}
+		.overlay-inner.no-text .overlay-image-wrap {
+			flex: 0 0 100%;
+		}
+		.overlay-inner.no-text .overlay-content {
+			display: none;
+		}
+		.overlay-close {
+			position: absolute;
+			top: 0.75rem;
+			right: 0.85rem;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background: rgba(0,0,0,0.55);
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			font-size: 1.1rem;
+			z-index: 10;
+			transition: background 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			line-height: 1;
+		}
+		.overlay-close:hover { background: rgba(0,0,0,0.85); }
+		.overlay-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: rgba(255,255,255,0.15);
+			border: none;
+			color: #fff;
+			font-size: 1.4rem;
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			backdrop-filter: blur(4px);
+		}
+		.overlay-nav:hover { background: rgba(255,255,255,0.3); }
+		.overlay-nav.prev { left: -58px; }
+		.overlay-nav.next { right: -58px; }
+		article.box.style2 .image.featured { cursor: pointer; }
+		article.box.style2 .image.featured img {
+			transition: transform 0.3s ease, filter 0.3s ease;
+		}
+		article.box.style2:hover .image.featured img {
+			transform: scale(1.04);
+			filter: brightness(0.85);
+		}
+		@media (max-width: 680px) {
+			.overlay-inner { flex-direction: column; max-height: 92vh; }
+			.overlay-image-wrap { flex: 0 0 auto; min-height: 200px; max-height: 45vh; }
+			.overlay-nav.prev { left: 0.5rem; }
+			.overlay-nav.next { right: 0.5rem; }
+			.overlay-content { padding: 1.4rem 1.2rem; }
+		}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Inicio</a></li>
+					<!-- <li><a href="#work">Work</a></li> -->
+					<li><a href="#pruebas">Pruebas</a></li>
+					<li><a href="#actua">Actua</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
+						</div>
+						<div class="col-8 col-7-large col-10-medium">
+							<header>
+								<h1>No seas <strong>Marianista</strong>.</h1>
+							</header>
+							<p>Página que agrupa testimonios de alumn@s y ex-alumn@s victimas de hostigamiento sexual por docentes dentro de la institución.</p> <!-- <a href="http://twitter.com/ajlkn"></a> -->
+							<a href="#pruebas" class="button large scrolly">Entiende por qué Aquí</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Work
+			<article id="work" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Here's all the stuff I do.</h2>
+						<p>Odio turpis amet sed consequat eget posuere consequat.</p>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon featured fa-comments"></span>
+								<h3>Consequat lorem</h3>
+								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon solid featured fa-camera-retro"></span>
+								<h3>Lorem dolor tempus</h3>
+								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon featured fa-thumbs-up"></span>
+								<h3>Feugiat posuere</h3>
+								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+							</section>
+						</div>
+					</div>
+					<footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
+					</footer>
+				</div>
+			</article>  -->
+
+		<!-- Portfolio -->
+			<article id="pruebas" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Pruebas y testimonios</h2>
+						<!-- <p>Entre alumnos por la broma. Con profesores nunca.<!-- </p> -->
+					</header>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic01.jpg"
+								   data-title="Magna feugiat"
+								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
+									<img src="images/pic01.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Magna feugiat</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic02.jpg"
+								   data-title="Veroeros primis"
+								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
+									<img src="images/pic02.jpg" alt="Veroeros primis" />
+								</a>
+								<h3>Veroeros primis</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic03.jpg"
+								   data-title="Lorem ipsum"
+								   data-text="">
+									<img src="images/pic03.jpg" alt="Lorem ipsum" />
+								</a>
+								<h3>Lorem ipsum</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic04.jpg"
+								   data-title="Tempus dolore"
+								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
+									<img src="images/pic04.jpg" alt="Tempus dolore" />
+								</a>
+								<h3>Tempus dolore</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic05.jpg"
+								   data-title="Feugiat aliquam"
+								   data-text="Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.">
+									<img src="images/pic05.jpg" alt="Feugiat aliquam" />
+								</a>
+								<h3>Feugiat aliquam</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/pic06.jpg"
+								   data-title="Sed amet ornare"
+								   data-text="">
+									<img src="images/pic06.jpg" alt="Sed amet ornare" />
+								</a>
+								<h3>Sed amet ornar</h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article id="actua" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Esto es lo que puedes hacer.</h2>
+						<p>Utiliza estos enlaces para hacer un reclamo o denuncia.</p>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small" >
+							<section class="box style1">
+								<a href="https://siseve.minedu.gob.pe/web/" target="_blank">
+									<span class="icon featured fa-address-card"></span>
+									<h3>Denuncia en SISEVE aquí</h3>
+									<p>Si eres padre de familia o alumn@<br>(Hay número de Whatsapp)</p>
+								</a>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<a href="https://identicole.minedu.gob.pe/colegio/mi_colegio/16640440" target="_blank">
+									<span class="icon solid featured fa-book-open"></span>
+									<h3>Denuncia en Identicole aquí</h3>
+									<p>Si eres docente o miembro de la institución<br>(Ir al botón naranja al final de la página)</p>
+								</a>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<a href="https://www.instagram.com/confe.marianist/" target="_blank">
+								<section class="box style1">
+									<span class="icon solid featured fa-fist-raised"></span>
+									<h3>Nuestro Instagram</h3>
+									<p>Comentanos y lo publicarémos aquí o en la misma página</p>
+								</section>
+							</a>
+						</div>
+					</div>
+					<footer>
+						<p>Eres alumno y tienes algo que decir?</p>
+						<a href="https://www.instagram.com/confe.marianist/" class="button large scrolly">Contáctanos via Instagram</a>
+					</footer>
+				</div>
+			</article>
+			
+		<!-- Contact 
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Have me make stuff for you.</h2>
+						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="text" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-12">
+							<hr />
+							<h3>Find me on ...</h3>
+							<ul class="social">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<!--
+								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
+								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
+								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
+								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
+								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
+								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
+								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
+								
+							</ul>
+							<hr />
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</div>
+			</article> -->
+
+		<!-- Portfolio Overlay -->
+		<div id="portfolio-overlay" role="dialog" aria-modal="true" aria-label="Portfolio item">
+			<!--  <button class="overlay-nav prev" aria-label="Previous">&#8249;</button> -->
+			<div class="overlay-inner">
+				<button class="overlay-close" aria-label="Close">&times;</button>
+				<div class="overlay-image-wrap">
+					<img id="overlay-img" src="" alt="" />
+				</div>
+				<div class="overlay-content">
+					<h3 id="overlay-title"></h3>
+					<p id="overlay-text"></p>
+				</div>
+			</div>
+			<!-- <button class="overlay-nav next" aria-label="Next">&#8250;</button> -->
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			(function() {
+				var items = [];
+				var currentIndex = 0;
+				var overlay = document.getElementById('portfolio-overlay');
+				var overlayInner = overlay.querySelector('.overlay-inner');
+				var imgEl = document.getElementById('overlay-img');
+				var titleEl = document.getElementById('overlay-title');
+				var textEl = document.getElementById('overlay-text');
+
+				function buildItems() {
+					items = Array.from(document.querySelectorAll('.portfolio-trigger'));
+				}
+
+				function openOverlay(index) {
+					currentIndex = index;
+					var trigger = items[index];
+					var img   = trigger.getAttribute('data-img');
+					var title = trigger.getAttribute('data-title') || '';
+					var text  = trigger.getAttribute('data-text') || '';
+
+					imgEl.src = img;
+					imgEl.alt = title;
+					titleEl.textContent = title;
+					textEl.textContent  = text;
+
+					if (text.trim() === '') {
+						overlayInner.classList.add('no-text');
+					} else {
+						overlayInner.classList.remove('no-text');
+					}
+
+					overlay.classList.add('active');
+					// Force reflow then add visible for fade-in
+					requestAnimationFrame(function() {
+						requestAnimationFrame(function() {
+							overlay.classList.add('visible');
+						});
+					});
+					document.body.style.overflow = 'hidden';
+				}
+
+				function closeOverlay() {
+					overlay.classList.remove('visible');
+					setTimeout(function() {
+						overlay.classList.remove('active');
+						document.body.style.overflow = '';
+					}, 300);
+				}
+
+				function navigate(dir) {
+					var next = (currentIndex + dir + items.length) % items.length;
+					// Reset animation
+					overlayInner.style.animation = 'none';
+					overlayInner.offsetHeight; // reflow
+					overlayInner.style.animation = '';
+					openOverlay(next);
+				}
+
+				document.addEventListener('DOMContentLoaded', function() {
+					buildItems();
+
+					items.forEach(function(trigger, i) {
+						trigger.addEventListener('click', function(e) {
+							e.preventDefault();
+							openOverlay(i);
+						});
+					});
+
+					overlay.querySelector('.overlay-close').addEventListener('click', closeOverlay);
+					overlay.querySelector('.prev').addEventListener('click', function() { navigate(-1); });
+					overlay.querySelector('.next').addEventListener('click', function() { navigate(1); });
+
+					// Close on backdrop click
+					overlay.addEventListener('click', function(e) {
+						if (e.target === overlay) closeOverlay();
+					});
+
+					// Keyboard support
+					document.addEventListener('keydown', function(e) {
+						if (!overlay.classList.contains('active')) return;
+						if (e.key === 'Escape') closeOverlay();
+						if (e.key === 'ArrowLeft')  navigate(-1);
+						if (e.key === 'ArrowRight') navigate(1);
+					});
+
+					// Touch swipe support
+					var touchStartX = 0;
+					overlay.addEventListener('touchstart', function(e) {
+						touchStartX = e.changedTouches[0].screenX;
+					}, { passive: true });
+					overlay.addEventListener('touchend', function(e) {
+						var diff = touchStartX - e.changedTouches[0].screenX;
+						if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+					}, { passive: true });
+				});
+			})();
+			</script>
+	</body>
+</html>
