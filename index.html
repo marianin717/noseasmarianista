@@ -171,8 +171,7 @@
 			display: block;
 		}
 		.overlay-image-wrap {
-			flex: 0 0 auto;
-			width: 100%;
+			flex: 0 0 55%;   /* ← esto, en vez de width: 100% */
 			min-height: unset;
 			max-height: unset;
 		}
@@ -181,7 +180,7 @@
 			width: 100%;
 			height: auto;
 			max-height: 70vh;
-			object-fit: contain;
+			object-fit: contain;   /* ← se mantiene, no hay zoom */
 		}
 		</style>
 	</head>
@@ -439,6 +438,30 @@
 							</article>
 						</div>
 						
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/13.jpg"
+								   data-title=""
+								   data-text=".">
+									<img src="images/13.jpg" alt="Magna feugiat" />
+								</a>
+								<h3>Diego</h3>
+								<p>.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured portfolio-trigger"
+								   data-img="images/14.png"
+								   data-title="Captura"
+								   data-text="Una alumna comparte y cuenta que profesores buscan sus cuentas de instagram o siguen sus cuentas e intentan interactuar con ellas">
+									<img src="images/14.png" alt="Magna feugiat" />
+								</a>
+								<h3>Captura de Pantalla</h3>
+								<p>.</p>
+							</article>
+						</div>
 						
 					</div>
 				</div>
@@ -645,8 +668,10 @@
 					});
 
 					overlay.querySelector('.overlay-close').addEventListener('click', closeOverlay);
-					overlay.querySelector('.prev').addEventListener('click', function() { navigate(-1); });
-					overlay.querySelector('.next').addEventListener('click', function() { navigate(1); });
+					var prevBtn = overlay.querySelector('.prev');
+					var nextBtn = overlay.querySelector('.next');
+					if (prevBtn) prevBtn.addEventListener('click', function() { navigate(-1); });
+					if (nextBtn) nextBtn.addEventListener('click', function() { navigate(1); });
 
 					// Close on backdrop click
 					overlay.addEventListener('click', function(e) {
